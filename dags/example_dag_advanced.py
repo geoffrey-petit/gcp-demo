@@ -120,10 +120,10 @@ def inviting_friends(subject: str, body: str) -> None:
     # This defines how often your DAG will run, or the schedule by which DAG runs are created. It can be
     # defined as a cron expression, custom timetable, existing presets or using the Dataset feature.
     # This DAG uses a preset to run daily.
-    schedule="@daily",
+    schedule=None,
     # Default settings applied to all tasks within the DAG; can be overwritten at the task level.
     default_args={
-        "owner": "community",  # Defines the value of the "owner" column in the DAG view of the Airflow UI
+        "owner": "",
         "retries": 2,  # If a task fails, it will retry 2 times.
         "retry_delay": duration(
             minutes=3
