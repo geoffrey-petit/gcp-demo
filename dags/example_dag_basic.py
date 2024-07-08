@@ -12,7 +12,7 @@ from airflow.decorators import (
 @dag(
     # This defines how often your DAG will run, or the schedule by which your DAG runs. In this case, this DAG
     # will run daily
-    schedule="@daily",
+    schedule=None,
     # This DAG is set to run for the first time on January 1, 2023. Best practice is to use a static
     # start_date. Subsequent DAG runs are instantiated based on the schedule
     start_date=datetime(2023, 1, 1),
@@ -21,6 +21,7 @@ from airflow.decorators import (
     # run will be for the next 30 mins, per the its schedule
     catchup=False,
     default_args={
+        "owner": "",
         "retries": 2,  # If a task fails, it will retry 2 times.
     },
     tags=["example"],
