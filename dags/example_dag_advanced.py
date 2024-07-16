@@ -48,8 +48,9 @@ def inviting_friends(subject: str, body: str) -> None:
 @dag(
     start_date=datetime(2023, 1, 1),
     max_active_runs=1,
-    schedule=None,
+    schedule="@hourly",
     default_args={
+        "owner": "DS Team",
         "retries": 2,
         "retry_delay": duration(
             minutes=3
