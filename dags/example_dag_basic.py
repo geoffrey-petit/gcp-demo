@@ -11,6 +11,7 @@ from airflow.decorators import (
     start_date=datetime(2023, 1, 1),
     catchup=False,
     default_args={
+        "owner"= "DS Team"
         "retries": 2,
     },
     tags=["example"],
