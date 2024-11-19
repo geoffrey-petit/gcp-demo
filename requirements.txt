@@ -1,1 +1,2 @@
-astronomer-starship[provider]
+astronomer-starship
+apache-airflow-providers-microsoft-azure==10.5.1
