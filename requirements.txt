@@ -1,2 +1,3 @@
 astronomer-starship
 apache-airflow-providers-microsoft-azure==10.5.1
+apache-airflow-providers-snowflake==6.0.0
