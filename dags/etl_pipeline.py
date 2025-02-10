@@ -59,6 +59,7 @@ dag = DAG(
     schedule=None,
     start_date=datetime(2023, 1, 1),
     catchup=False,
+    tags=["example"],
 )
 
 trigger_informatica_job_task = PythonOperator(
