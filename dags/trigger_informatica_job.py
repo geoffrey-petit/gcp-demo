@@ -17,6 +17,7 @@ with DAG(
     schedule=None,
     start_date=days_ago(1),
     catchup=False,
+    tags=["example"],
 ) as dag:
 
     trigger_informatica_job = HttpOperator(

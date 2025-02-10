@@ -51,13 +51,14 @@ def inviting_friends(subject: str, body: str) -> None:
     schedule=None,
     default_args={
         "retries": 2,
+        'owner': 'airflow',
         "retry_delay": duration(
             minutes=3
         ),
     },
     default_view="graph",
     catchup=False,
-    tags=["example"],
+    tags=["example",],
 )
 def example_dag_advanced():
     # EmptyOperator placeholder for first task

@@ -19,6 +19,7 @@ dag = DAG(
     schedule=None,
     start_date=datetime(2023, 1, 1),
     catchup=False,
+    tags=["example"],
 )
 
 start_task = DummyOperator(

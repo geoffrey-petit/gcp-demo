@@ -12,6 +12,7 @@ from airflow.decorators import (
     catchup=False,
     default_args={
         "retries": 2,
+        'owner': 'airflow',
     },
     tags=["example"],
 )
