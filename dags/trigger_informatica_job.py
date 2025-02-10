@@ -14,7 +14,7 @@ with DAG(
     'informatica_job_orchestration',
     default_args=default_args,
     description='A DAG to orchestrate Informatica jobs using REST API',
-    schedule_interval='@daily',
+    schedule=None,
     start_date=days_ago(1),
     catchup=False,
 ) as dag:
